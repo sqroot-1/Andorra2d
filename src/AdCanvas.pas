@@ -3010,7 +3010,7 @@ begin
   while Range(itstart, 0, FPoints.Count - 1, 20, 5, itstart, itstop, splstart, splcount) do
   begin
     spline := TAdCubicSpline.Create(
-      @x[splstart], @y[splstart], nil, splcount);
+      TAdFloatArray(@x[splstart]), TAdFloatArray(@y[splstart]), nil, splcount);
 
     //Iterate through all points in the list
     for i := itstart + 1 to itstop do
